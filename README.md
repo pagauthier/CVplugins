@@ -15,6 +15,10 @@ The plugins are written in JS (Jesusonic). JS is a scripting language evaluated 
 ## Usage
 Load one of the plugin in your FX track. Automate them to create CV. Few of the plugins are creating either unipolar or bipolar CV in 1-chn or 8-chn version. This is for simple automation. Other plugins are converting midi note to gate, and CV (velocity + note). 
 
+## Future development
+1. Midi note to simple CV Decay envelop for and percussion.
+2. Midi note with full ADSR envelop.
+
 ## Authors
 Philippe-Aubert Gauthier, 2017, philippe_aubert_gauthier@hotmail.com, www.st-pierre-gauthier.com
 
