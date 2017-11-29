@@ -1,0 +1,45 @@
+// Copyright (C) 2017 Philippe-Aubert Gauthier
+// Simple CV control, bipolar, eight channel
+// For dc-coupled sound cards, use at your own risk, not responsible for any dommage
+
+desc:Bipolar 8-channel CV control for DC-coupled sound cards -> Modular synth
+
+slider1:0<-1,1,0.00001>CV1
+slider2:0<-1,1,0.00001>CV2
+slider3:0<-1,1,0.00001>CV3
+slider4:0<-1,1,0.00001>CV4
+slider5:0<-1,1,0.00001>CV5
+slider6:0<-1,1,0.00001>CV6
+slider7:0<-1,1,0.00001>CV7
+slider8:0<-1,1,0.00001>CV8
+
+@init
+cv1 = 0;
+cv2 = 0;
+cv3 = 0;
+cv4 = 0;
+cv5 = 0;
+cv6 = 0;
+cv7 = 0;
+cv8 = 0;
+
+@slider
+cv1 = slider1;
+cv2 = slider2;
+cv3 = slider3;
+cv4 = slider4;
+cv5 = slider5;
+cv6 = slider6;
+cv7 = slider7;
+cv8 = slider8;
+
+@sample
+spl0 = cv1;
+spl1 = cv2;
+spl2 = cv3;
+spl3 = cv4;
+spl4 = cv5;
+spl5 = cv6;
+spl6 = cv7;
+spl7 = cv8;
+

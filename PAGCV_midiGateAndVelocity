@@ -1,0 +1,27 @@
+// Copyright (C) 2017 Philippe-Aubert Gauthier
+// CV gate based on midi note, with velocity
+// For dc-coupled sound cards, use at your own risk, not responsible for any dommage
+
+desc:CV gate (scaled by vel) from midi note for __DC-coupled sound cards__ -> Mod synth
+
+@init
+cv1 = 0;
+statNoteOn = $x90;
+statNoteOff = $x80;
+
+@block
+while
+(
+  midirecv(offset, msg1, msg23) ?
+  (  
+    status = msg1 & $xF0;
+    channel = msg1 & $x0F;
+    note = msg23 & $x7F;
+    velocity = msg23 >> 8;
+    status == statNoteOn ? cv1 = velocity/127 : cv1 = 0;
+  )
+)
+
+@sample
+spl0 = cv1;
+

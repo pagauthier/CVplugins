@@ -1,0 +1,17 @@
+// Copyright (C) 2017 Philippe-Aubert Gauthier
+// Simple CV control, bipolar, single channel
+// For dc-coupled sound cards, use at your own risk, not responsible for any dommage
+
+desc:Bipolar single-channel CV control for DC-coupled sound cards -> Modular synth
+
+slider1:0<-1,1,0.00001>CV
+
+@init
+cv1 = 0;
+
+@slider
+cv1 = slider1;
+
+@sample
+spl0 = cv1;
+

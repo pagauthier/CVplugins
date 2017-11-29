@@ -1,0 +1,20 @@
+// Copyright (C) 2017 Philippe-Aubert Gauthier
+// Simple CV control, unipolar, single channel, scaled input
+// For dc-coupled sound cards, use at your own risk, not responsible for any dommage
+
+desc:Unipolar 1-chn CV control, with scaled in, for DC-coupled sound cards -> Mod synth
+
+slider1:0<0,1,0.00001>CV
+slider2:0<-1,1,0.00001>Scale input CV
+
+@init
+cv1 = 0;
+scale = 1;
+
+@slider
+cv1 = slider1;
+scale = slider2;
+
+@sample
+spl0 = cv1 + scale*spl0;
+
