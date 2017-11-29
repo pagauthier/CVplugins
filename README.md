@@ -18,6 +18,7 @@ Load one of the plugin in your FX track. Automate them to create CV. Few of the 
 ## Future development
 1. Midi note to simple CV Decay envelop for and percussion.
 2. Midi note with full ADSR envelop.
+3. CV processing utilities: slew rate limiter, invert, scale, clip, split, etc.
 
 ## Authors
 Philippe-Aubert Gauthier, 2017, philippe_aubert_gauthier@hotmail.com, www.st-pierre-gauthier.com
