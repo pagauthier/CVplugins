@@ -1,6 +1,19 @@
+/////////////////////////////////////////////////////////////////////////////////////////////
 // Copyright (C) 2017 Philippe-Aubert Gauthier
+// info: www.st-pierre-gauthier.com
+// https://github.com/pagauthier/CVplugins
+/////////////////////////////////////////////////////////////////////////////////////////////
+//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// __________  _____    ________   __    _____________   ____  __                       .___
+// \______   \/  _  \  /  _____/   \ \   \_   ___ \   \ /   /  \ \     _____   ____   __| _/
+//  |     ___/  /_\  \/   \  ___    \ \  /    \  \/\   Y   /    \ \   /     \ /  _ \ / __ | 
+//  |    |  /    |    \    \_\  \   / /  \     \____\     /     / /  |  Y Y  (  <_> ) /_/ | 
+//  |____|  \____|__  /\______  /  /_/    \______  / \___/     /_/   |__|_|  /\____/\____ | 
+//                 \/        \/                 \/                        \/            \/ 
+/////////////////////////////////////////////////////////////////////////////////////////////
 // CV gate based on midi note, with velocity, and note
-// For dc-coupled sound cards, use at your own risk, not responsible for any dommage
+// For dc-coupled sound cards, use at your own risk, not responsible for any dammage
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 desc:CV gate>chn1, vel>chn2, note>chn3 for __DC-coupled sound cards__ -> Mod synth
 
@@ -22,7 +35,7 @@ while
     velocity = msg23 >> 8;
     status == statNoteOn ? cv1 = 1 : cv1 = 0;
     status == statNoteOn ? cv2 = velocity/127 : cv2 = 0;
-    status == statNoteOn ? cv3 = note/127 : cv3 = 0;
+    status == statNoteOn ? cv3 = (note/12)*0.1 : cv3 = 0;
   )
 )
 
