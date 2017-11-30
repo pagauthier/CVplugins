@@ -26,7 +26,7 @@ Philippe-Aubert Gauthier, 2017, philippe_aubert_gauthier@hotmail.com, www.st-pie
 ## License
 Use them, mod them, harder, better, faster, stronger ...
 
-```javascript
+```
       ___                 ___          ___                          ___          ___           
      /  /\    ___        /  /\        /  /\             ___        /  /\        /  /\  ___     
     /  /::\  /__/\      /  /::\      /  /:/            /  /\      /  /::\      /  /:/ /__/\    
